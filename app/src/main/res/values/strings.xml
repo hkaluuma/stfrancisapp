@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Stfrancis</string>
+    <string name="school_logo_desc">School Logo</string>
+    <string name="welcome_message">Welcome to Our School App!</string>
+    <string name="username_hint">Enter your username</string>
+    <string name="password_hint">Enter your password</string>
+    <string name="login_button_text">Login</string>
+    <string name="signup_link_text">Don\'t have an account? Sign up here!</string>
 </resources>
