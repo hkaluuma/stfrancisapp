@@ -12,12 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Stfrancis"
         tools:targetApi="31">
+
         <activity
             android:name=".MainActivity"
             android:exported="false"
-            android:theme="@style/Theme.Stfrancis" >
-        </activity>
+            android:theme="@style/Theme.Stfrancis">
 
+        </activity>
         <activity
             android:name=".LoginActivity"
             android:exported="true">
