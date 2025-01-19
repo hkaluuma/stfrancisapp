@@ -23,21 +23,21 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
         //new codes here
-        binding = ActivityLoginBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+//        binding = ActivityLoginBinding.inflate(layoutInflater)
+//        setContentView(binding.root)
+//
+//        val navController = findNavController(R.id.fragment_container)
+//        appBarConfiguration = AppBarConfiguration(navController.graph)
+//        setupActionBarWithNavController(navController, appBarConfiguration)
 
-        val navController = findNavController(R.id.nav_host_fragment_content_main)
-        appBarConfiguration = AppBarConfiguration(navController.graph)
-        setupActionBarWithNavController(navController, appBarConfiguration)
-
-        binding.loginButton.setOnClickListener {
-            Toast.makeText(this, "Login to home page", Toast.LENGTH_SHORT).show()
-
-            // In SourceActivity
-            val intent = Intent(this, MainActivity::class.java)
-            intent.putExtra("FRAGMENT_NAME", "FirstFragment") // Specify the fragment to load
-            startActivity(intent)
-        }
+//        binding.loginButton.setOnClickListener {
+//            Toast.makeText(this, "Login to home page", Toast.LENGTH_SHORT).show()
+//
+//            // In SourceActivity
+//            val intent = Intent(this, LoginActivity::class.java)
+//            intent.putExtra("FRAGMENT_NAME", "FirstFragment") // Specify the fragment to load
+//            startActivity(intent)
+//        }
 
     }
 }
