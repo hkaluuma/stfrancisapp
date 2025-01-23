@@ -1,6 +1,8 @@
 package com.example.stfrancis
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -20,21 +22,10 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.fragment1Btn.setOnClickListener {
-            replaceFragment(FragmentOne())
+        binding.tvaddfacility.setOnClickListener {
+            Toast.makeText(this, "Login successful", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, MainFragmentView::class.java)
+            startActivity(intent)
         }
-
-        binding.fragment2Btn.setOnClickListener {
-            replaceFragment(FragmentTwo())
-        }
-
-    }
-
-    //new method to replace fragment
-    private fun replaceFragment(fragment:Fragment){
-        val fragmentManager = supportFragmentManager
-        val fragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.fragmentContainer,fragment)
-        fragmentTransaction.commit()
     }
 }
