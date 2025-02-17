@@ -7,9 +7,13 @@
     android:id="@+id/FirstFragment"
     tools:context=".FirstFragment">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
         <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:background="#e4e4e4"
         tools:context=".Admin.AdminHome"
         tools:ignore="HardcodedText">
@@ -153,11 +157,11 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:id="@+id/tvaddfacility"
+                        android:id="@+id/tv_staff_profile"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="ADD FACILITY"
+                        android:text="@string/staff_profile"
                         android:textAllCaps="true"
                         android:textColor="@color/black"
                         android:textSize="14sp"
@@ -193,18 +197,18 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:src="@drawable/ic_user"
-                        app:layout_constraintBottom_toTopOf="@+id/textView20"
+                        app:layout_constraintBottom_toTopOf="@+id/tv_students_profile"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.5"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:id="@+id/textView20"
+                        android:id="@+id/tv_students_profile"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="ADD SUBCOUNTY"
+                        android:text="@string/students_profile"
                         android:textAllCaps="true"
                         android:textColor="@color/black"
                         android:textSize="14sp"
@@ -253,18 +257,18 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:src="@drawable/ic_user"
-                        app:layout_constraintBottom_toTopOf="@+id/textView21"
+                        app:layout_constraintBottom_toTopOf="@+id/tv_top_students"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.5"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:id="@+id/textView21"
+                        android:id="@+id/tv_top_students"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="ADD DISTRICTS"
+                        android:text="@string/top_students"
                         android:textAllCaps="true"
                         android:textColor="@color/black"
                         android:textSize="14sp"
@@ -300,18 +304,18 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:src="@drawable/ic_user"
-                        app:layout_constraintBottom_toTopOf="@+id/textView22"
+                        app:layout_constraintBottom_toTopOf="@+id/tv_school_calender"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.5"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:id="@+id/textView22"
+                        android:id="@+id/tv_school_calender"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="CREATE ACCOUNT"
+                        android:text="@string/school_calender"
                         android:textAllCaps="true"
                         android:textColor="@color/black"
                         android:textSize="14sp"
@@ -359,18 +363,18 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:src="@drawable/ic_user"
-                        app:layout_constraintBottom_toTopOf="@+id/textView23"
+                        app:layout_constraintBottom_toTopOf="@+id/tv_class_performance"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.5"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:id="@+id/textView23"
+                        android:id="@+id/tv_class_performance"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="UPDATE PASSWORD"
+                        android:text="@string/class_performance"
                         android:textAllCaps="true"
                         android:textColor="@color/black"
                         android:textSize="14sp"
@@ -406,18 +410,18 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:src="@drawable/ic_user"
-                        app:layout_constraintBottom_toTopOf="@+id/textView4"
+                        app:layout_constraintBottom_toTopOf="@+id/tv_meals_schedule"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.5"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:id="@+id/textView4"
+                        android:id="@+id/tv_meals_schedule"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="REPORTS"
+                        android:text="@string/meals_schedule"
                         android:textAllCaps="true"
                         android:textColor="@color/black"
                         android:textSize="14sp"
@@ -428,13 +432,14 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/image_view" />
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
-            </androidx.cardview.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
-        </LinearLayout>
+            </LinearLayout>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
+    </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>

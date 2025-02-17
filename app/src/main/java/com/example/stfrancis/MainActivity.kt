@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.tvaddfacility.setOnClickListener {
+        binding.tvStaffProfile.setOnClickListener {
             Toast.makeText(this, "Login successful", Toast.LENGTH_SHORT).show()
             val intent = Intent(this, MainFragmentView::class.java)
             startActivity(intent)

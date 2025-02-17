@@ -12,8 +12,8 @@ class MainFragmentView : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_fragment_view)
 
+        //calling the fragment replacement method
         replaceFragment(FragmentOne())
-
 
 //        binding.fragment1Btn.setOnClickListener {
 //            replaceFragment(FragmentOne())

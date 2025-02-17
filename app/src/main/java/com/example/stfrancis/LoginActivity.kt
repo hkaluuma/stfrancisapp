@@ -53,7 +53,7 @@ class LoginActivity : AppCompatActivity() {
                     // if Inputs are valid
                     Toast.makeText(this, "Login successful", Toast.LENGTH_SHORT).show()
                     val intent = Intent(this, MainActivity::class.java)
-                    intent.putExtra("FRAGMENT_NAME", "FirstFragment") // Specify the fragment to load
+                   // intent.putExtra("FRAGMENT_NAME", "FirstFragment") // Specify the fragment to load
                     startActivity(intent)
                 }
             }
