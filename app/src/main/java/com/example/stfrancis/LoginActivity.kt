@@ -3,6 +3,7 @@ package com.example.stfrancis
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.util.Patterns
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -20,8 +21,6 @@ class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
-        //new codes here
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -35,25 +34,30 @@ class LoginActivity : AppCompatActivity() {
             // Validate inputs
             when {
                 username.isEmpty() -> {
-                    binding.usernameInput.error = "Username cannot be empty"
+                    binding.usernameInput.error = getString(R.string.error_username_empty)
+                    binding.usernameInput.requestFocus()
+                }
+
+                // If input looks like an email, enforce proper email format
+                username.contains("@") && !Patterns.EMAIL_ADDRESS.matcher(username).matches() -> {
+                    binding.usernameInput.error = getString(R.string.error_invalid_email)
                     binding.usernameInput.requestFocus()
                 }
 
                 password.isEmpty() -> {
-                    binding.passwordInput.error = "Password cannot be empty"
+                    binding.passwordInput.error = getString(R.string.error_password_empty)
                     binding.passwordInput.requestFocus()
                 }
 
                 password.length < 6 -> {
-                    binding.passwordInput.error = "Password must be at least 6 characters long"
+                    binding.passwordInput.error = getString(R.string.error_password_length)
                     binding.passwordInput.requestFocus()
                 }
 
                 else -> {
                     // if Inputs are valid
-                    Toast.makeText(this, "Login successful", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, getString(R.string.login_successful), Toast.LENGTH_SHORT).show()
                     val intent = Intent(this, MainActivity::class.java)
-                   // intent.putExtra("FRAGMENT_NAME", "FirstFragment") // Specify the fragment to load
                     startActivity(intent)
                 }
             }
